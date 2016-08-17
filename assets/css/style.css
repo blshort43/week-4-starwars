@@ -24,6 +24,11 @@ p {
     margin: 0;
 }
 
+#charContainer {
+	margin-left: 20px;
+	padding: 0;
+}
+
 .imgdiv {
     border: 2px solid green;
     background-color: yellow;
