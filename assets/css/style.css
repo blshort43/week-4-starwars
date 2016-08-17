@@ -11,8 +11,8 @@ img {
 	padding: 0;
 }
 
-h2 {
-	margin-left: 30px;
+h1, h2 {
+	margin-left: 20px;
 	margin-top: 10px;
 }
 
@@ -29,8 +29,7 @@ p {
 	padding: 0px 20px 0px 20px;
 }
 
-.enemydiv {
-
+.enemy {
 	border: 2px solid green;
 	background-color: red;
 	text-align: center;
