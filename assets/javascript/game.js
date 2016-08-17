@@ -1,6 +1,6 @@
 
 $(".imgdiv").click(function() {
-	console.log(this);
+	// console.log(this);
     console.log('I was clicked');
 
 });
@@ -11,26 +11,79 @@ $(".imgdiv").click(function() {
 
 
 
-$("#img1").click(function() {
+$("#img1.character").click(function() {
 	$(this).removeClass("character");
-	$(".character").appendTo("#fightContainer").addClass("enemy");
+	$(".character").appendTo("#fightContainer").removeClass("character").addClass("enemy");
+	$("#img2").addClass("enemy2");
+	$("#img3").addClass("enemy3");
+	$("#img4").addClass("enemy4");
+});
+
+$("#img2.character").click(function(){
+	$(this).removeClass("character");
+	$(".character").appendTo("#fightContainer").removeClass("character").addClass("enemy");
+	$("#img1").addClass("enemy1");
+	$("#img3").addClass("enemy3");
+	$("#img4").addClass("enemy4");
+});
+
+$("#img3.character").click(function(){
+	$(this).removeClass("character");
+	$(".character").appendTo("#fightContainer").removeClass("character").addClass("enemy");
+	$("#img1").addClass("enemy1");
+	$("#img2").addClass("enemy2");
+	$("#img4").addClass("enemy4");
+});
+
+$("#img4.character").click(function(){
+	$(this).removeClass("character");
+	$(".character").appendTo("#fightContainer").removeClass("character").addClass("enemy");
+	$("#img1").addClass("enemy1");
+	$("#img2").addClass("enemy2");
+	$("#img3").addClass("enemy3");
+});
+
+$("#img1").click(function(){
+ 	if($("#defender").is(":empty") && $(this).hasClass("enemy1")){
+ 		$(this).appendTo("#defender").addClass("defender");
+ 	}
 });
 
 $("#img2").click(function(){
-	$(this).removeClass("character");
-	$(".character").appendTo("#fightContainer").addClass("enemy");
+ 	if($("#defender").is(":empty") && $(this).hasClass("enemy2")){
+ 		$(this).appendTo("#defender").addClass("defender");
+ 	}
 });
 
 $("#img3").click(function(){
-	$(this).removeClass("character");
-	$(".character").appendTo("#fightContainer").addClass("enemy");
+ 	if($("#defender").is(":empty") && $(this).hasClass("enemy3")){
+ 		$(this).appendTo("#defender").addClass("defender");
+ 	}
 });
 
 $("#img4").click(function(){
-	$(this).removeClass("character");
-	$(".character").appendTo("#fightContainer").addClass("enemy");
+ 	if($("#defender").is(":empty") && $(this).hasClass("enemy4")){
+ 		$(this).appendTo("#defender").addClass("defender");
+ 	}
 });
 
+// $(".enemy3").click(function(){
+//  	if($("#defender").is(':empty')){
+//  		$(".enemy3").appendTo("#defender").addClass("defender");
+//  	}
+// });
+
+// $(".enemy4").click(function(){
+//  	if($("#defender").is(':empty')){
+//  		$(".enemy4").appendTo("#defender").addClass("defender");
+//  	}
+// });
+
+// if ($("#defender") === " ")function(){
+// 	$(".enemy").click(function(){
+// 		$(this).removeClass("enemy");
+// 		$(".enemy").appendTo("#defender").addClass("defender");
+// 	})
 
 
 

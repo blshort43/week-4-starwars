@@ -36,8 +36,11 @@ p {
 	float: left;
 	padding: 0px 20px 0px 20px;
 }
-	background-color: red;
-}
+
+.enemy1, .enemy2, .enemy3 .enemy4{
+	}
+
+
 
 h1 {
 	margin-left: 30px;
