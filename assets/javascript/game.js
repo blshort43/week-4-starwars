@@ -44,26 +44,26 @@ $("#img4").click(function() {
 });
 
 $("#img1").click(function() {
-    if ($("#defender").is(":empty") && $(this).hasClass("enemy1")) {
-        $(this).appendTo("#defender").removeClass("enemy").addClass("defender");
+    if ($("#defenderDiv").is(":empty") && $(this).hasClass("enemy1")) {
+        $(this).appendTo("#defenderDiv").removeClass("enemy").addClass("defender");
     }
 });
 
 $("#img2").click(function() {
-    if ($("#defender").is(":empty") && $(this).hasClass("enemy2")) {
-        $(this).appendTo("#defender").removeClass("enemy").addClass("defender");
+    if ($("#defenderDiv").is(":empty") && $(this).hasClass("enemy2")) {
+        $(this).appendTo("#defenderDiv").removeClass("enemy").addClass("defender");
     }
 });
 
 $("#img3").click(function() {
-    if ($("#defender").is(":empty") && $(this).hasClass("enemy3")) {
-        $(this).appendTo("#defender").removeClass("enemy").addClass("defender");
+    if ($("#defenderDiv").is(":empty") && $(this).hasClass("enemy3")) {
+        $(this).appendTo("#defenderDiv").removeClass("enemy").addClass("defender");
     }
 });
 
 $("#img4").click(function() {
-    if ($("#defender").is(":empty") && $(this).hasClass("enemy4")) {
-        $(this).appendTo("#defender").removeClass("enemy").addClass("defender");
+    if ($("#defenderDiv").is(":empty") && $(this).hasClass("enemy4")) {
+        $(this).appendTo("#defenderDiv").removeClass("enemy").addClass("defender");
     }
 });
 
