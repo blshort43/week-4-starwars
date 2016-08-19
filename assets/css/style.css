@@ -6,15 +6,22 @@
     margin: 0;
 }
 
+/*body{
+	background: url(../images/wallpaper.jpg);
+	background-size: 1000px 800px;
+	background-repeat: no-repeat;
+}*/
+
 img {
-	height: 115px;
-	width: 115px;
+	height: 100px;
+	width: 100px;
     padding: 0;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     margin-left: 20px;
     margin-top: 10px;
 }
@@ -37,6 +44,11 @@ p {
 #defenderDiv {
 	margin-left: 20px;
 	padding: 0;
+}
+
+#fightSection {
+	padding: 0;
+	margin-left: 20px;
 }
 
 
@@ -62,6 +74,4 @@ p {
 .enemy3,
 .enemy4 {}
 
-#defenderDiv {
-    margin-left: 15px;
-}
+

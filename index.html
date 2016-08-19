@@ -9,28 +9,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
-<body>
-    <h1>Meme Fight!</h1>
+<body >
+    <h1 class="title">Meme Fight!</h1>
     <div id="charContainer" class="container">
         <div id="img1" class="imgdiv character">
-            <p>Conspiracy Keanu</p>
+            <div>Conspiracy Keanu</div>
             <div><img src="assets/images/conspiracy.jpg" /></div>
-            <p class="keanuP"></p>
+            <p class="keanuP">120</p>
+
         </div>
         <div id="img2" class="imgdiv character">
-            <p>Grumpy Cat</p>
+            <div>Grumpy Cat</div>
             <div><img src="assets/images/grumpy.jpg" /></div>
-            <p class="grumpyP"></p>
+            <p class="grumpyP">100</p>
         </div>
         <div id="img3" class="imgdiv character">
-            <p>Scumbag Steve</p>
+            <div>Scumbag Steve</div>
             <div><img src="assets/images/scumbag.jpg" /></div>
-            <p class="scumbagP"></p>
+            <p class="scumbagP">150</p>
         </div>
         <div id="img4" class="imgdiv character">
-            <p>Doge</p>
+            <div>Doge</div>
             <div><img src="assets/images/doge.jpg" /></div>
-            <p class="dogeP"></p>
+            <p class="dogeP">180</p>
         </div>
     </div>
     <h3 id="charh2">Your Character</h3>
@@ -40,12 +41,17 @@
     <div id="enemies" class="container"></div>
     <br>
     <br>
-    <div id="fightArea" class="container"></div>
+    <h4>Fight Section</h4>
+    <div id="fightSection" class="container">
+    	<button type="button" class="btn btn-danger">Attack</button>
+
+    </div>
     <div id="container3" class="container"></div>
     <div id="fight"></div>
     <h3>Defender</h3>
     <div id="defenderDiv"></div>
     <script src="assets/javascript/game.js"></script>
+	</div>
 </body>
 
 </html>
