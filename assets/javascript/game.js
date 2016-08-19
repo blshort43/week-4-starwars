@@ -5,6 +5,7 @@ $(".imgdiv").click(function() {
 
 // create attributes for each character
 var keanu = $("#img1");
+keanu.attr("name", "Conspiracy Keanu");
 keanu.attr("healthPoints", 120);
 keanu.attr("baseAttack", 5);
 keanu.attr("attackPower", 5);
@@ -12,6 +13,7 @@ keanu.attr("counterAttackPower", 10);
 
 
 var grumpy = $("#img2");
+grumpy.attr("name", "Grumpy Cat");
 grumpy.attr("healthPoints", 100);
 grumpy.attr("baseAttack", 10);
 grumpy.attr("attackPower", 10);
@@ -46,16 +48,21 @@ $(".imgdiv").click(function() {
 
 $(".btn").click(function(){
 //decrease defender's health when champ attacks
-var defenderHealthLoss = parseInt($(".defender").attr('healthPoints')) - parseInt($(".champ").attr('attackPower'));
+var defenderHealthLoss = parseInt($(".defender").attr("healthPoints")) - parseInt($(".champ").attr('attackPower'));
 $(".defender").attr("healthPoints", defenderHealthLoss);
 $(".defender p").html(defenderHealthLoss);
 var attackIncrease = parseInt($(".champ").attr('attackPower')) + parseInt($(".champ").attr('baseAttack'))
 $(".champ").attr("attackPower", attackIncrease);
+// $("#fightInfo").html("You attacked " + $(".defender").attr("name") + "for " + attackIncrease);
 
 //decrease champ's health when defender counter attacks
 var counterAttack = parseInt($(".champ").attr('healthPoints')) - parseInt($(".defender").attr('counterAttackPower'));
 $(".champ").attr("healthPoints", counterAttack);
 $(".champ p").html(counterAttack);
+
+if (defenderHealthLoss<=0){
+    $("#defenderDiv").empty();
+}
 
 });
 
