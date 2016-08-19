@@ -24,13 +24,6 @@ doge.attr("healthPoints", 180);
 doge.attr("attackPower", 20);
 doge.attr("counterAttackPower", 25);
 
-
-// display character's health
-// $("#img1").append(keanu.attr('healthPoints'));
-// $("#img2").append(grumpy.attr('healthPoints'));
-// $("#img3").append(scumbag.attr('healthPoints'));
-// $("#img4").append(doge.attr('healthPoints'));
-
 // make character choices and move to different divs on click
 $(".imgdiv").click(function() {
     $(this).removeClass("character").addClass("champ");
@@ -43,19 +36,19 @@ $(".imgdiv").click(function() {
     }
 });
 
-
 $(".btn").click(function(){
 //decrease defender's health when champ attacks
 var defenderHealthLoss = parseInt($(".defender").attr('healthPoints')) - parseInt($(".champ").attr('attackPower'));
 $(".defender").attr("healthPoints", defenderHealthLoss);
-var updateNumber = (defenderHealthLoss);
-$(".defender p").html(updateNumber);
+$(".defender p").html(defenderHealthLoss);
 
 //decrease champ's health when defender counter attacks
 var counterAttack = parseInt($(".champ").attr('healthPoints')) - parseInt($(".defender").attr('counterAttackPower'));
 $(".champ").attr("healthPoints", counterAttack);
-var updateNumber = (counterAttack);
-$(".champ p").html(updateNumber);
+$(".champ p").html(counterAttack);
 
-})
+// if ($(".defender").attr("healthPoints", defenderHealthLoss) === 0) {
+//     alert("a;lksfj");
+// }
+});
 
