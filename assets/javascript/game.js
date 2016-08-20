@@ -49,7 +49,7 @@ var winCounter = 0;
 $(".btn").click(function() {
 
     if ($("#defenderDiv").is(":empty")) {
-        alert("You dont have a champ or enemy!");
+        alert("You're missing a champ or an enemy, choose one!");
 
     } else {
         //decrease defender's health when champ attacks
@@ -68,8 +68,17 @@ $(".btn").click(function() {
         $(".counterAttack").html($(".defender").attr("name") + " " + "counter attacked you for " + parseInt($(".defender").attr('attackPower')) + " damage!");
 
         if (($(".champ").attr('healthPoints')) <= 0) {
-            alert("You lose!");
-            location.reload(true);
+            $("#enemyh2, #charh2").empty();
+            $("#enemies").empty();
+            $("#charContainer").empty();
+            $("#enemies").append("<img id='win' src='assets/images/fail.jpg' />");
+            $(".attackBtn").remove();
+            $(".counterAttack").empty();
+            $(".attackDamage").html($(".defender").attr("name") + " " + "defeated you!"); 
+            $("#fightSection").append("<button type='button' class='btn btn-success'>Reload</button>");
+            $(".btn-success").click(function(){
+                location.reload(true);
+            });
         }
 
         if (defenderHealthLoss <= 0) {
@@ -78,11 +87,19 @@ $(".btn").click(function() {
             $("#defenderDiv").empty();
             winCounter++;
             if (winCounter === 3) {
-                alert("You won!")
-                location.reload(true);
+                $("#enemyh2, #charh2").empty();
+                $("#charContainer").empty();
+                $("#enemies").append("<img id='win' src='assets/images/win.jpg' />")
+                $(".attackBtn").remove();
+                $(".attackDamage").empty();
+                $("#fightSection").append("<button type='button' class='btn btn-success'>Reload</button>")
             } else if ($("#defenderDiv").is(":empty") && winCounter < 3) {
                 $(".info").html("Pick a new enemy!");
             }
+
+            $(".btn-success").click(function(){
+                location.reload(true);
+            });
 
         };
 

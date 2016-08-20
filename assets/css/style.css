@@ -52,7 +52,11 @@ p.info {
     margin: 0;
     margin-left: 20px;
 }
-
+#win {
+	size: auto;
+	height: auto;
+	width: auto;
+}
 
 #charContainer {
 	margin-left: 20px;
