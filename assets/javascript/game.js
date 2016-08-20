@@ -50,7 +50,9 @@ $(".imgdiv").click(function() {
 $(".btn").click(function(){
 
 if ($("#defenderDiv").is(":empty")){
-alert("Pick a champ and an enemy!");
+alert("You dont have a champ or enemy!");
+// }else if ($("#defenderDiv").is(":empty")){
+// alert("Pick an enemy!");
 }else{
 //decrease defender's health when champ attacks
 var defenderHealthLoss = parseInt($(".defender").attr("healthPoints")) - parseInt($(".champ").attr('attackPower'));
