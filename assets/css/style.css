@@ -1,35 +1,30 @@
-
 @font-face {
-  font-family: 'MyWebFont';
-  src: url('webfont.eot'); /* IE9 Compat Modes */
-  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'MyWebFont';
+    src: url('webfont.eot');
+    /* IE9 Compat Modes */
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+    url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+    url('webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('webfont.svg#svgFontName') format('svg');
+    /* Legacy iOS */
 }
 
-
-.container {
-    margin: 0;
-}
-
-html { 
-  background: url(../images/background.jpg) 
-  no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html {
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
-	background: none;
+    background: none;
 }
 
 img {
-	height: 100px;
-	width: 100px;
+    height: 100px;
+    width: 100px;
     padding: 0;
 }
 
@@ -37,47 +32,50 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: "Karopapier";
-	color: white;
+    font-family: "Karopapier";
+    color: white;
     margin-left: 20px;
     margin-top: 10px;
 }
 
-
 p.attackDamage,
 p.counterAttack,
 p.info {
-	color: white;
+    color: white;
     padding: 0;
     margin: 0;
     margin-left: 20px;
 }
+
+.container {
+    margin: 0;
+}
+
 #win {
-	size: auto;
-	height: auto;
-	width: auto;
+    size: auto;
+    height: auto;
+    width: auto;
 }
 
 #charContainer {
-	margin-left: 20px;
-	padding: 0;
+    margin-left: 20px;
+    padding: 0;
 }
 
 #enemies {
-	margin-left: 20px;
-	padding: 0;
+    margin-left: 20px;
+    padding: 0;
 }
 
 #defenderDiv {
-	margin-left: 20px;
-	padding: 0;
+    margin-left: 20px;
+    padding: 0;
 }
 
 #fightSection {
-	padding: 0;
-	margin-left: 20px;
+    padding: 0;
+    margin-left: 20px;
 }
-
 
 .imgdiv {
     border: 2px solid green;
@@ -92,7 +90,7 @@ p.info {
 }
 
 .defender {
-	color: white;
+    color: white;
     background-color: black;
 }
 
@@ -102,14 +100,12 @@ p.info {
 .enemy4 {}
 
 .btn {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .keanuP,
 .grumpyP,
 .scumbagP,
 .dogeP {
-	margin: 0;
+    margin: 0;
 }
-
-
