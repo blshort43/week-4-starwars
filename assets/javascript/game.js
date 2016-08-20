@@ -46,14 +46,21 @@ $(".imgdiv").click(function() {
     }
 });
 
+
 $(".btn").click(function(){
+
+if ($("#defenderDiv").is(":empty")){
+alert("Pick a champ and an enemy!");
+}else{
 //decrease defender's health when champ attacks
 var defenderHealthLoss = parseInt($(".defender").attr("healthPoints")) - parseInt($(".champ").attr('attackPower'));
 $(".defender").attr("healthPoints", defenderHealthLoss);
 $(".defender p").html(defenderHealthLoss);
-var attackIncrease = parseInt($(".champ").attr('attackPower')) + parseInt($(".champ").attr('baseAttack'))
+var attackIncrease = parseInt($(".champ").attr('attackPower')) + parseInt($(".champ").attr('baseAttack'));
 $(".champ").attr("attackPower", attackIncrease);
-// $("#fightInfo").html("You attacked " + $(".defender").attr("name") + "for " + attackIncrease);
+console.log(attackIncrease);
+
+$("#fightInfo").html("You attacked " + $(".defender").attr("name") + " " + "for " + attackIncrease);
 
 //decrease champ's health when defender counter attacks
 var counterAttack = parseInt($(".champ").attr('healthPoints')) - parseInt($(".defender").attr('counterAttackPower'));
@@ -61,8 +68,13 @@ $(".champ").attr("healthPoints", counterAttack);
 $(".champ p").html(counterAttack);
 
 if (defenderHealthLoss<=0){
+    $("#fightInfo").empty();
+    alert("You have defeated " + $(".defender").attr("name") + "!");
     $("#defenderDiv").empty();
-}
+    if ($("#defenderDiv").is(":empty")){
+        alert("Pick a new enemy!");
+    }
+};
 
+};
 });
-
