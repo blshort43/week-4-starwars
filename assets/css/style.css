@@ -1,16 +1,31 @@
-#row1::before {
-    content: ;
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+
 
 .container {
     margin: 0;
 }
 
-/*body{
-	background: url(../images/wallpaper.jpg);
-	background-size: 1000px 800px;
-	background-repeat: no-repeat;
-}*/
+html { 
+  background: url(../images/background.jpg) 
+  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	background: none;
+}
 
 img {
 	height: 100px;
@@ -22,14 +37,22 @@ h1,
 h2,
 h3,
 h4 {
+	font-family: "Karopapier";
+	color: white;
     margin-left: 20px;
     margin-top: 10px;
 }
 
-p {
+
+p.attackDamage,
+p.counterAttack,
+p.info {
+	color: white;
     padding: 0;
     margin: 0;
+    margin-left: 20px;
 }
+
 
 #charContainer {
 	margin-left: 20px;
@@ -73,5 +96,16 @@ p {
 .enemy2,
 .enemy3,
 .enemy4 {}
+
+.btn {
+	margin-bottom: 5px;
+}
+
+.keanuP,
+.grumpyP,
+.scumbagP,
+.dogeP {
+	margin: 0;
+}
 
 
